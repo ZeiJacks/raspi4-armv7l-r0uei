@@ -232,11 +232,14 @@ class App < Sinatra::Base
     end
 
     begin
-      s = ActiveRecord::Base.connection.execute("SELECT \"reports\".user_id, \"reports\".report, \"reports\".created_at FROM reports 
-        WHERE (report LIKE'%#{params[:searching_text]}%')")
+      s = ActiveRecord::Base.connection.execute("SELECT \"reports\".user_id, \"reports\".report, \"reports\".created_at FROM reports WHERE (report LIKE'%#{params[:searching_text]}%')")
+
 
       s_result = ""
-      if s.size == 0
+#      if s.size == 0
+#      p s.size
+      p s
+      if s == nil
         e = '検索結果がありません'
       end
       s.each do |si|
