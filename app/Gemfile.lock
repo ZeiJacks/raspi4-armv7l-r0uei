@@ -17,6 +17,7 @@ GEM
     minitest (5.16.3)
     mustermann (3.0.0)
       ruby2_keywords (~> 0.0.1)
+    pg (1.4.5)
     rack (2.2.4)
     rack-protection (3.0.3)
       rack
@@ -30,21 +31,21 @@ GEM
     sinatra-activerecord (2.0.26)
       activerecord (>= 4.1)
       sinatra (>= 1.0)
-    sqlite3 (1.5.4-x86_64-linux)
     tilt (2.0.11)
     tzinfo (2.0.5)
       concurrent-ruby (~> 1.0)
     webrick (1.7.0)
 
 PLATFORMS
+  arm-linux-musleabihf
   x86_64-linux-musl
 
 DEPENDENCIES
+  pg
   rack
   rake
   sinatra
   sinatra-activerecord
-  sqlite3
   webrick
 
 BUNDLED WITH
